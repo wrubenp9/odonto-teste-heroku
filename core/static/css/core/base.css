@@ -1,0 +1,256 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('../../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins-Regular;
+    font-size: 12px;
+}
+
+body {
+    width: 100%;
+    background: #2D3766;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* height: 53px; */
+    /* height: 65px; */
+    width: 100%;
+    padding: 10px 5%;
+    background-color: #09092b;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000000;
+}
+
+/* NAVBAR */
+
+nav .logo {
+    margin-right: auto;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+nav a {
+    color: #CCCCCC;
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav .nav-links li {
+    padding: 0 20px;
+}
+
+nav .nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+nav .nav-links li a:hover {
+    /* color: #6C7BBE; */
+    color: #118a80;
+}
+
+nav #menu {
+    padding: 0;
+}
+
+.nav-links .perfil {
+    padding-right: 0;
+    border-radius: 100%;
+}
+
+.nav-links .perfil img {
+    width: 40px;
+    border-radius: 100%;
+}
+
+.nav-links .icon {
+    height: 24px;
+    filter: invert(96%) sepia(0%) saturate(902%) hue-rotate(253deg) brightness(86%) contrast(93%);
+}
+
+.cta {
+    font-size: 18px;
+    margin-left: 20px;
+    padding: 9px 25px;
+    color: #CCCCCC;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+    /* color: #6C7BBE; */
+    color: #118a80;
+}
+
+#menu {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #2D3766;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+    z-index: 1000001;
+}
+
+.overlay-active {
+    width: 100%;
+}
+
+.overlay-content {
+    position: relative;
+    top: 50px;
+    left: 70px;
+    height: 100%;
+}
+
+.overlay-content .block {
+    position: absolute;
+    left: 10px;
+    height: 250px;
+    width: 2px;
+    background-color: #118a80;
+}
+
+.overlay-content .orvelay-link {
+    width: 250px;
+}
+
+.overlay a {
+    color: #CCCCCC;
+    padding: 15px;
+    font-size: 16px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.overlay i {
+    padding: 0 10px;
+}
+
+.overlay-content a {
+    font-family: 'Oswald', sans-serif;
+}
+
+.overlay a:hover, .overlay a:focus {
+    /* color: #6C7BBE; */
+    color: #118a80;
+}
+
+.overlay .close {
+    font-size: 28px;
+    padding: 0;
+    color: #CCCCCC;
+    cursor: pointer;
+}
+
+.nav-link{
+    padding: 5px 20px;
+}
+
+#mobile__menu .nav-link-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mobile__menu .nav-link-icon .logout {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+#mobile__menu .nav-link-icon .logout span {
+    padding-left: 10px;
+}
+
+#mobile__menu .nav-link-icon .logout:hover {
+    display: flex;
+    align-items: center;
+    filter: invert(32%) sepia(93%) saturate(1199%) hue-rotate(147deg) brightness(93%) contrast(87%);
+    color: #118a80;
+}
+
+#mobile__menu .nav-link-icon .icon {
+    width: 24px;
+    filter: invert(96%) sepia(0%) saturate(902%) hue-rotate(253deg) brightness(86%) contrast(93%);
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .nav-links li, .cta {
+        display: none;
+    }
+    #menu {
+        display: initial;
+    }
+}
+
+#conteudo {
+    position: relative;
+    top: 65px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+@media screen and (max-width: 767.98px) {
+    #conteudo {
+        position: relative;
+        top: 53px;
+    }
+}

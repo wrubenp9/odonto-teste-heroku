@@ -1,0 +1,67 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block titulo %} Pagina Principal {% endblock %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/core/normalize.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/core/home.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+<div class="container">
+    <div class="container-welcome">
+        <div class="welcome">
+            <span>BEM-VINDO</span>
+            <span class="name">Olá, {{ user.first_name }} {{ user.last_name }}!</span>
+        </div>
+    </div>
+
+    <div class="container-fast-action">
+        <div class="box-action-txt">
+            <div class="action-txt">
+                <p>Ações rápidas</p>
+            </div>
+        </div>
+        <div class="box-fast-action">
+            <div class="fast-action">
+                <div class="item">
+                    <img src="{% static 'img/icons/journal-medical.svg'%}" />
+                </div>
+                <p>Histórico de Consulta</p>
+                <!-- <p>Clientes</p> -->
+            </div>
+            <div class="fast-action">
+                <div class="item">
+                    <img src="{% static 'img/icons/last-appointment.svg'%}" />
+                </div>
+                <p>Última Consulta</p>
+            </div>
+            <div class="fast-action">
+                <div class="item">
+                    <img src="{% static 'img/icons/user.svg'%}" />
+                </div>
+                <p>Meu Perfil</p>
+            </div>
+            <div class="fast-action">
+                <a href="{% url 'quiz:forms' %}"></a>
+                <div class="item">
+                    <img src="{% static 'img/icons/card-checklist.svg'%}" />
+                </div>
+                </a>
+                <p>Anamnese</p>
+
+            </div>
+            <div class="fast-action">
+                <a href="{% url 'quiz:forms' %}">
+                    <div class="item">
+                        <img src="{% static 'img/icons/calendar-event.svg'%}" />
+                    </div>
+                </a>
+                <p>Agendar Consulta</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base/base-account.html" %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/account/login.css' %}">
+{% endblock%}
+
+{% block conteudo %}
+<section id="conteudo">
+    <div class="container">
+        <div class="box-login">
+            <div class="logo">
+                <img src="{% static 'img/account/logo-odonto.svg' %}">
+            </div>
+
+            {% for message in messages %}
+
+            {{message}}
+
+            {% endfor%}
+
+            <form class="form" method="post">
+                {% csrf_token %}
+                <div class="box-form">
+                    <div class="form-item">
+                        <label for="username">Login</label>
+                        {{form.username}}
+                    </div>
+                    <div class="form-item">
+                        <label for="password">Senha</label>
+                        {{form.password}}
+                        <div class="form-link reset-password">
+                            <a href="#">Esqueceu a senha?</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-link register">
+                    <span>Não tem uma conta?</span>
+                    <a href="{% url 'register' %}">Registre-se</a>
+                </div>
+                <div class="box-button">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock%}

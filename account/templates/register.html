@@ -1,0 +1,83 @@
+{% extends "base/base-account.html" %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/account/register.css' %}">
+{% endblock%}
+
+
+{% block conteudo %}
+<section id="conteudo">
+    <div id="container">
+        <div class="box-form">
+            <div class="title"><span>Cadastro</span>
+            </div>
+            <!-- {% if messages %}
+                {% for message in messages %}
+                    alert(message);
+                {% endfor %}
+            {% endif %} -->
+            <form class="form" method="post" autocomplete="off">
+                {% csrf_token %}
+                <div class="form-item">
+                    <label for="email">Email</label>
+                    <div class="input">
+                        <i class="fas fa-envelope"></i>
+                        {{form.email}}
+                            <!-- {{message.success}} -->
+   
+                    </div>
+                </div>
+
+                <div class="form-short form-item">
+                    <label for="username">Nome de Usuário</label>
+                    <div class="input">
+                        <i class="fas fa-user"></i>
+                        {{form.username}}
+                    </div>
+                </div>
+                <div class="form-beside form-item">
+                    <div class="form-short">
+                        <label for="first_name">Nome</label>
+                        <div class="input">
+                            <i class="fas fa-user"></i>
+                            {{form.first_name}}
+                        </div>
+                    </div>
+                    <div class="form-short p-20">
+                        <label for="last_name">Sobrenome</label>
+                        <div class="input">
+                            <i class="fas fa-user"></i>
+                            {{form.last_name}}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-beside form-item">
+                    <div class="password form-short">
+                        <label for="password1">Senha</label>
+                        <div class="input">
+                            <i class="fas fa-unlock"></i>
+                            {{form.password1}}
+                        </div>
+                    </div>
+                    <div class="password form-short p-20">
+                        <label for="password2">Confirmar senha</label>
+                        <div class="input">
+                            <i class="fas fa-unlock"></i>
+                            {{form.password2}}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-link">
+                    <span>Ja tenho conta.</span>
+                    <a href="{% url 'login' %}">Fazer login!</a>
+                </div>
+                <div class="box-button">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

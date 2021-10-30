@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('../../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins-Regular;
+    font-size: 14px;
+}
+
+body {
+    background: #09092b;
+    /* background: #0C1321; */
+    width: 100%;
+}
+
+#conteudo {
+    height: 100vh;
+    padding: 5% 0;
+}
+
+/* BUTTON */
+
+.box-button {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.box-button button {
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #CCCCCC;
+    background: #1D2B45;
+    height: 30px;
+    padding: 5px 25px;
+    cursor: pointer;
+}
+
+.box-button button:hover{
+    font-weight: 600;
+    color: #1D2B45;
+    background: #118a80;
+}

@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}{% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/core/base.css' %}">
+
+    {% block style %}
+    {% endblock %}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <header>
+        <nav>
+            <a class="logo" href="{% url 'home'%}">SuaLogo</a>
+            <ul class="nav-links">
+                {% block nav-links %}
+                
+                {% endblock %}
+                <li>
+                    <a href="{% url 'logout'%}">
+                        <img class="icon" src="{% static 'img/icons/logout.svg'%}" />
+                    </a>
+                </li>
+                <li class="perfil">
+                    <img src="{% static 'img/user.jpg'%}">
+                </li>
+            </ul>
+            <i id="menu" class="cta fas fa-bars"></i>
+
+        </nav>
+    </header>
+
+    <div id="mobile__menu" class="overlay">
+        <div class="nav-link">
+        <div class="nav-link-icon">
+            <a class="logout" href="{% url 'logout'%}">
+                <img class="icon" src="{% static 'img/icons/logout.svg'%}" />
+                <span>Sair</span>
+            </a>
+            <a class="close ">&times;</a>
+        </div>
+        </div>
+
+        <div class="overlay-content">
+            <!-- <div class="block"></div> -->
+            <div class="orvelay-link">
+                <a href="{% url 'home'%}"><i class="fas fa-home"></i>Home</a>
+                <a href="#"><i class="far fa-sticky-note"></i>Histórico</a>
+                <a href="#"><i class="far fa-sticky-note"></i>Histórico</a>
+                <a href="{% url 'quiz:forms' %}"><i class="far fa-sticky-note"></i>Formulário</a>
+                <a href="#"><i class="far fa-sticky-note"></i>Histórico</a>
+            </div>
+        </div>
+
+    </div>
+    {% endif %}
+
+    <section id="conteudo">
+        {% block conteudo %}
+        <!-- <input type="hidden" name="text" value="{{ next }}"> -->
+        {% endblock %}
+    </section>
+
+    <!-- <footer>
+        <p>&copy 2021 - Wesley Ruben</p>
+    </footer> -->
+    <script type="text/javascript" src="{% static 'js/mobile.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+#conteudo{
+    width: 100%;
+    padding: 2.5% 5%;
+    /* temporario */
+    color: #CCCCCC;
+}
+
+.title {
+    text-align: center;
+}
+
+.title span{
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFFFF;
+    padding-bottom: 25px;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.box-form {
+    width: 500px;
+}
+
+input{
+    width: 100%;
+}
+
+/* um do lado do outro */
+.form-beside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-short {
+    width: 200px;
+}
+
+.form-item input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #344058;
+    font-size: 12px;
+    color: #FFFFFF;
+    padding: 0 15px 0 30px;
+}
+
+.form-item label {
+    font-size: 12px;
+}
+
+.form-item {
+    padding-top: 20px
+}
+
+
+#container form input::-webkit-input-placeholder {
+    Color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.fas {
+    font-size: 12px;
+}
+
+.form-item .input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 444px) {
+    .p-20 {
+        padding-top: 20px
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .form-item {
+        width: 250px;
+    }
+
+    .form-short {
+        width: 250px;
+    }
+}
+
+.form-item .input i{
+    position: absolute;
+    padding: 0 10px;
+}
+
+.form-link {
+    padding-top: 30px;
+}
+.form-link span {
+    font-size: 12px;
+    color: #CCCCCC;
+}
+
+.form-link a{
+    font-size: 12px;
+    color: #CCCCCC;
+    color: #1EC3B5;
+    text-decoration: none;
+}
+
+.form-link a:hover{
+    color: #118a80;
+}
+
+.box-button {
+    padding-top: 10px;
+}

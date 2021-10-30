@@ -1,0 +1,141 @@
+/* ====================
+    PAGINA HOME
+==================== */
+
+#home {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+#home .container-welcome {
+    position: relative;
+    bottom: 100px;
+    height: 100%;
+}
+
+#home .illustration {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#home .illustration img {
+    width: 450px
+}
+
+@media (max-width: 575.98px) {
+    #home {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #home .container-welcome {
+        bottom: 20px;
+    }
+    #home .illustration {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    #home .illustration img {
+        height: 300px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    #home {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #home .container-welcome {
+        bottom: 30px;
+    }
+    #home .illustration {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    #home .illustration img {
+        height: 350px;
+    }
+}
+
+.box-welcome {
+    font-family: 'Oswald', sans-serif;
+    color: #CCCCCC;
+}
+
+.box-welcome .welcome {
+    font-size: 84px;
+    font-weight: bold;
+}
+
+.box-welcome .name {
+    position: relative;
+    bottom: 20px;
+    font-size: 24px;
+}
+
+.box-social-network {
+    display: flex;
+    align-items: center;
+    margin-top: 10px
+}
+
+.box-social-network a {
+    text-decoration: none;
+    color: #CCCCCC;
+}
+
+.box-social-network .fab {
+    font-size: 18px;
+}
+
+.box-social-network .text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+@media (max-width: 575.98px) {
+    .box-welcome .welcome {
+        font-size: 66px;
+        font-weight: bold;
+    }
+}
+
+/* footer {
+    height: 100px;
+    background-color: #1B213D;
+}
+
+footer p {
+    font-size: 12px;
+} */
+
+/* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
+
+@media (max-width: 575.98px) {}
+
+/* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+/* Dispositivos médios (tablets com 768px ou mais) */
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+/* Dispositivos large (desktops com 992px ou mais) */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* Dispositivos extra large (desktops grandes com 1200px ou mais) */
+
+@media (min-width: 1200px) {}
