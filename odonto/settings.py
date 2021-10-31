@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import dj_database_url
+# import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,20 +87,14 @@ WSGI_APPLICATION = 'odonto.wsgi.application'
 #         'PORT': '5432',
 #     }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'daupuj1aetc4ie',
-#         'USER': 'fkcunfeoaesttq',
-#         'PASSWORD': '0686ca6af855903ab58838036791fc8c6b7b178abd5d3fd879f48eb02f28af64',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
+
 
 DATABASES = {
-    'default': dj_database_url.config('postgres://fkcunfeoaesttq:0686ca6af855903ab58838036791fc8c6b7b178abd5d3fd879f48eb02f28af64@ec2-52-205-136-23.compute-1.amazonaws.com:5432/daupuj1aetc4ie')
+    'default': dj_database_url.config()
 }
+
+
+# DATABASES['default'].update({'default': dj_database_url.config()})
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
